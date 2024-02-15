@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SkillBox from "./SkillBox";
 import SkillSquare from "./SkillSquare";
 import { skillType } from "../../../../@types/maple/CharacterSkillType";
@@ -12,6 +12,7 @@ interface Props {
 }
 
 const FiveSkill: React.FC<Props> = ({ skillList, haveFiveSkill }) => {
+
   return (
     <SkillContainer>
       <SkillDegree>5차 스킬</SkillDegree>

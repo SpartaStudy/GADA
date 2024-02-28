@@ -51,6 +51,12 @@ spring:
             - Path=/maple-service/**
           filters:
             - CustomFilter
+        - id: dnf-service
+          uri: lb://DNF-SERVICE
+          predicates:
+            - Path=/dnf-service/**
+          filters:
+            - CustomFilter
 
 management:
   endpoints:

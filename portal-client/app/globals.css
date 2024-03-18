@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg-color: #1d2527;
+  --secondary-bg-color: #283338;
+  --third-bg-color: #465054;
+  --main-border-color: #777;
+  --custom-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  line-height: 1.1rem;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+

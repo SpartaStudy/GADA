@@ -20,11 +20,13 @@ const NavLinks = ({ links }: Props) => {
       {links.map((link) => (
         <Link key={link.name} href={link.href} className={`flex w-[64px] h-[64px] overflow-hidden relative`}>
           <Image className="object-contain" src={`/images/${link.icon}`} alt={link.alt} width={64} height={64} />
-          <div
-            className={clsx("absolute bottom-0 w-full h-[2px] bg-slate-400 animate-spread-horz", {
-              hidden: currIcon[0].name !== link.name,
-            })}
-          />
+          {currIcon.length > 0 && (
+            <div
+              className={clsx("absolute bottom-0 w-full h-[2px] bg-slate-400 animate-spread-horz", {
+                hidden: currIcon[0].name !== link.name,
+              })}
+            />
+          )}
         </Link>
       ))}
     </div>

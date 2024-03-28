@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -27,10 +28,37 @@ const config: Config = {
         "third-bg-color": "#465054",
         "main-button-color": "#237fb7",
         "main-button-focus-color": "#24a0ed",
+        "legendary-color": "#fec763",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase, addComponents, addUtilities, theme }) {
+      addBase({});
+      addComponents({
+        ".shimmer": {
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+        },
+        ".shimmer:before": {
+          content: '""',
+          position: "absolute",
+          inset: "0",
+          transform: "translateX(-100%)",
+          animation: "shimmer 2s infinite",
+          backgroundImage: "linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent)",
+        },
+        "@keyframes shimmer": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+      });
+      addUtilities({});
+    }),
+  ],
 };
+
 export default config;
 

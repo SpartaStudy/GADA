@@ -1,11 +1,13 @@
-import React from "react";
-import FamousCharacter from "./FamousCharacter";
+import React, { Suspense } from "react";
+import FamousCharacter from "./FamousCharacter/FamousCharacter";
+import { SkeletonFamousCharacter } from "../skeletons";
 
 const BottomContainer = () => {
   return (
     <div className="w-full h-2/5 relative flex justify-center box-border">
-      <FamousCharacter />
-      <FamousCharacter />
+      <Suspense fallback={<SkeletonFamousCharacter />}>
+        <FamousCharacter />
+      </Suspense>
     </div>
   );
 };

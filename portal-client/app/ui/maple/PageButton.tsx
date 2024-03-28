@@ -5,9 +5,9 @@ const PageButton = () => {
   return (
     <Link
       href="https://maple.gada.app"
-      className="w-[160px] h-[40px] bg-third-bg-color rounded-md absolute bottom-[24px] flex justify-center items-center"
+      className="w-[200px] h-[40px] bg-main-button-color rounded-md absolute bottom-[64px] flex justify-center items-center shadow-lg hover:bg-main-button-focus-color"
     >
-      바로가기
+      <span className="text-md font-bold tracking-widest">사이트 이동하기</span>
     </Link>
   );
 };

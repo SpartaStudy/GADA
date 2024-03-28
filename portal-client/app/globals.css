@@ -8,6 +8,7 @@
   --third-bg-color: #465054;
   --main-border-color: #777;
   --custom-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --main-button-color: #24a0ed;
 }
 
 @media (prefers-color-scheme: dark) {

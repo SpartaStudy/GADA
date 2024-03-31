@@ -36,3 +36,12 @@ export const SkeletonFamousCharacter = () => {
   );
 };
 
+export const SkeletonCharacterRank = () => {
+  return (
+    <div className="m-0 p-0 w-[360px] h-[236px] mx-[16px] bg-secondary-bg-color rounded-[4px] shimmer">
+      <SkeletonTitle />
+      <SkeletonList />
+    </div>
+  );
+};
+
